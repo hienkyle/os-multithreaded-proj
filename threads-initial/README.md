@@ -1,6 +1,6 @@
 # Pthread Programming
 ## Operating Systems
-## Due March XX by 23:59
+## Due March 21 by 23:59
 
 In this project, you will complete three pthread programs.  The first program is a sudoku validator.  The second program is a sorting program that uses threads.  The third program is a Monte Carlo Pi estimator.  By completing these programs, you will gain confidence in writing pthread programs necessary for the next project.
 
