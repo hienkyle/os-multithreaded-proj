@@ -12,6 +12,7 @@ using namespace std;
 
 
 // Function prototypes
+
 void* mergeSort(void *pos);
 
 std::ifstream openFile(const std::string fileName);
@@ -19,6 +20,7 @@ void readArr(std::ifstream& file);
 
 
 // Global variables
+
 int eleCount;
 int *arr; // the original array
 int *tmp; // a temporary buffer
