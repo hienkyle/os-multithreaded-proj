@@ -11,6 +11,7 @@
 using namespace std;
 
 // Function prototypes
+
 void *rowCheck(void *pos);
 void *colCheck(void *pos);
 void *subGridCheck(void *pos);
@@ -20,33 +21,10 @@ std::ifstream openFile(const std::string fileName);
 void readSudoku(std::ifstream& file);
 
 // Global variables
+
 int const SUDOKU_SIZE = 9;
 int const NUMBER_OF_THREADS = 27; // 9 subgrids + 9 rows + 9 columns
 int validations[NUMBER_OF_THREADS] = {0}; // 0 - 8 for subgrids, 9 - 17 for rows, 18 - 26 for columns
-// int sudoku[9][9] = { // a predefined valid sudoku from the instruction
-//   {6, 2, 4, 5, 3, 9, 1, 8, 7},
-//   {5, 1, 9, 7, 2, 8, 6, 3, 4},
-//   {8, 3, 7, 6, 1, 4, 2, 9, 5},
-//   {1, 4, 3, 8, 6, 5, 7, 2, 9}, 
-//   {9, 5, 8, 2, 4, 7, 3, 6, 1}, 
-//   {7, 6, 2, 3, 9, 1, 4, 5, 8}, 
-//   {3, 7, 1, 9, 5, 6, 8, 4, 2}, 
-//   {4, 9, 6, 1, 8, 2, 5, 7, 3}, 
-//   {2, 8, 5, 4, 7, 3, 9, 1, 6}
-// };
-
-// int sudoku[9][9] = { // a predefined invalid sudoku from the test files
-//   {1, 2, 3, 4, 5, 6, 7, 8, 9},
-//   {1, 2, 3, 4, 5, 6, 7, 8, 9},
-//   {1, 2, 3, 4, 5, 6, 7, 8, 9},
-//   {1, 2, 3, 4, 5, 6, 7, 8, 9},
-//   {1, 2, 3, 4, 5, 6, 7, 8, 9},
-//   {1, 2, 3, 4, 5, 6, 7, 8, 9},
-//   {1, 2, 3, 4, 5, 6, 7, 8, 9},
-//   {1, 2, 3, 4, 5, 6, 7, 8, 9},
-//   {1, 2, 3, 4, 5, 6, 7, 8, 9}
-// };
-
 int sudoku[SUDOKU_SIZE][SUDOKU_SIZE] = {0}; // a blank sudoku
 
 // Parameter structure
