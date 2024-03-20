@@ -15,7 +15,7 @@ void *estimator(void *arg);
 
 // Global variables
 
-const int NUM_OF_THREADS = 100;
+const int NUM_OF_THREADS = 10;
 long hitCircle = 0;
 long tossesPerThread;
 pthread_mutex_t mutex = PTHREAD_MUTEX_INITIALIZER;
@@ -23,12 +23,12 @@ pthread_mutex_t mutex = PTHREAD_MUTEX_INITIALIZER;
 
 int main(){
     // get the number of tosses from stdin
-    long tosses;
+    // long tosses;
     std::cout << "Enter the number of tosses: " << std::flush;
-    std::cin >> tosses;
+    std::cin >> tossesPerThread;
 
     // calculate the number of tosses per thread
-    tossesPerThread = (long) std::ceil(tosses / NUM_OF_THREADS);
+    // tossesPerThread = (long) std::ceil(tosses / NUM_OF_THREADS);
 
     // create threads to do estimation
     pthread_t threads[NUM_OF_THREADS];

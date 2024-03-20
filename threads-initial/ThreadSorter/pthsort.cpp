@@ -148,7 +148,7 @@ std::ifstream openFile(const std::string fileName){
   std::ifstream file(fileName);
 
   if(!file.is_open()){ // if the file does not exist
-    std::cerr << "file " << fileName << " does not exist" << std::flush;
+    std::cerr << "file " << fileName << " does not exist" << std::endl;
     exit(1);
   }
 
